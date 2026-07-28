@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="奈良市・富雄駅前の近藤接骨院。スポーツ中のケガ、外傷の保険施術、自費施術による身体のケアに対応しています。">
+  <meta name="theme-color" content="#169447">
+  <title>近藤接骨院｜富雄駅前・土日も受付</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root{
+      --green:#169447;
+      --green-dark:#087037;
+      --green-soft:#edf9f1;
+      --blue:#195aa3;
+      --blue-dark:#11447e;
+      --orange:#f28c28;
+      --yellow:#ffd43d;
+      --ink:#17202b;
+      --muted:#65717d;
+      --line:#dbe4ec;
+      --surface:#ffffff;
+      --page:#f6f9fb;
+      --shadow:0 12px 34px rgba(28,66,96,.11);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--ink);background:var(--page);
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      line-height:1.7;-webkit-font-smoothing:antialiased;
+    }
+    img,svg{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,a{touch-action:manipulation}
+    .container{width:min(calc(100% - 28px),var(--max));margin-inline:auto}
+    .section{padding:58px 0}
+    .section-white{background:#fff}
+    .section-title{text-align:center;margin:0 auto 27px;max-width:740px}
+    .section-title h2{margin:0;font-size:clamp(1.55rem,6vw,2.35rem);line-height:1.3;letter-spacing:.02em}
+    .section-title h2::before,.section-title h2::after{content:"／";color:var(--green);font-weight:400;margin:0 .28em}
+    .section-title p{margin:10px 0 0;color:var(--muted);font-size:.95rem}
+    .sample-ribbon{background:#0b7138;color:#fff;text-align:center;padding:7px 12px;font-size:.78rem;font-weight:800}
+
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:62px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.05em}
+    .brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1.3rem;box-shadow:0 8px 18px rgba(22,148,71,.2)}
+    .brand small{display:block;font-size:.62rem;color:var(--muted);letter-spacing:.08em;line-height:1.1}
+    .desktop-nav{display:none;align-items:center;gap:22px;font-size:.88rem;font-weight:800}
+    .desktop-nav a:hover{color:var(--green)}
+    .header-tel{display:none;background:var(--blue);color:#fff;padding:10px 16px;border-radius:999px;font-weight:900}
+
+    .hero{background:#fff;overflow:hidden}
+    .hero-wrap{display:grid;gap:0}
+    .hero-copy{display:none;padding:26px 14px 24px;order:1;align-self:center}
+    .kicker{color:var(--green);font-weight:900;font-size:.9rem;letter-spacing:.05em;margin-bottom:10px}
+    h1{font-size:clamp(2.45rem,12vw,5rem);line-height:1.08;letter-spacing:.03em;margin:0 0 15px;font-weight:900}
+    .hero-lead{font-weight:800;font-size:1.04rem;line-height:1.55;margin:0 0 14px}
+    .hero-lead strong{color:var(--blue)}
+    .hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+    .hero-badge{display:flex;align-items:center;gap:7px;border:1px solid #cbd9e4;background:rgba(255,255,255,.93);border-radius:999px;padding:7px 11px;font-size:.82rem;font-weight:900;box-shadow:0 4px 10px rgba(42,73,98,.08);backdrop-filter:blur(6px)}
+    .hero-badge.green{color:var(--green)} .hero-badge.blue{color:var(--blue)}
+    .hero-badge svg{width:18px;height:18px}
+    .hero-actions{display:grid;gap:9px}
+    .btn{min-height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 15px;font-weight:900;font-size:1rem;border:2px solid transparent;box-shadow:0 8px 18px rgba(27,79,120,.09);transition:.2s transform,.2s filter}
+    .btn:hover{filter:brightness(.98);transform:translateY(-1px)}
+    .btn-line{background:linear-gradient(135deg,#19a34a,#0b8e3c);color:#fff}
+    .btn-tel{background:#fff;color:var(--blue);border-color:var(--blue)}
+    .btn svg{width:22px;height:22px}
+    .hero-photo{position:relative;min-height:720px;background:#eef4f0;overflow:hidden;order:1;border-radius:0 0 26px 26px;box-shadow:0 14px 34px rgba(28,66,96,.10)}
+    .hero-photo::before{display:none}
+    .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% center}
+    .hero-mobile-overlay{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;min-height:720px;padding:22px 16px 138px;color:#fff}
+    .hero-mobile-overlay .kicker,
+    .hero-mobile-overlay h1,
+    .hero-mobile-overlay .hero-lead{
+      width:fit-content;max-width:100%;background:rgba(7,18,14,.46);
+      border:1px solid rgba(255,255,255,.20);border-radius:13px;
+      padding:7px 11px;box-shadow:0 7px 20px rgba(0,0,0,.16);
+      backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+      text-shadow:0 1px 2px rgba(0,0,0,.28)
+    }
+    .hero-mobile-overlay .kicker{color:#b9f0c8;margin-bottom:9px}
+    .hero-mobile-overlay h1{font-size:clamp(2.25rem,10.8vw,3.65rem);max-width:9em;margin-bottom:10px;line-height:1.09}
+    .hero-mobile-overlay .hero-lead{max-width:25em;margin-bottom:10px;color:#fff}
+    .hero-mobile-overlay .hero-lead strong{color:#8fc9ff}
+    .hero-mobile-overlay .hero-badges{margin:3px 0 11px}
+    .hero-mobile-overlay .hero-badge{background:rgba(255,255,255,.94);box-shadow:0 5px 14px rgba(0,0,0,.12)}
+    .hero-mobile-overlay .hero-actions{width:100%;margin-top:0}
+    .hero-mobile-overlay .btn{box-shadow:0 10px 24px rgba(0,0,0,.20)}
+    .license-badge{position:absolute;z-index:3;right:14px;bottom:14px;width:105px;height:105px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;text-align:center;color:var(--green-dark);font-weight:900;font-size:.78rem;padding:12px;box-shadow:var(--shadow)}
+
+    .cards{display:grid;gap:11px}
+    .symptoms{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 20px rgba(32,73,103,.055)}
+    .symptom-card{padding:16px 8px;text-align:center;min-height:135px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .icon-circle{width:74px;height:74px;border-radius:20px;background:linear-gradient(145deg,#fff,#f2f7fb);display:grid;place-items:center;margin-bottom:10px;border:1px solid #e2eaf1;box-shadow:0 6px 14px rgba(39,79,112,.08)}
+    .icon-circle svg{width:56px;height:56px}
+    .symptom-card strong{font-size:.88rem;line-height:1.4}
+
+    .reasons{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .reason-card{padding:18px 12px;text-align:center;min-height:155px}
+    .reason-card .icon-circle{margin-inline:auto;background:#edf4fb}
+    .reason-card h3{margin:0;color:var(--blue);font-size:.96rem;line-height:1.45}
+    .reason-card p{margin:5px 0 0;color:var(--muted);font-size:.74rem;line-height:1.5}
+    .symptom-card:nth-child(1) .icon-circle,.reason-card:nth-child(3) .icon-circle{background:#eaf2ff;color:#245eb0}
+    .symptom-card:nth-child(2) .icon-circle{background:#fff4e7;color:#df7f22}
+    .symptom-card:nth-child(3) .icon-circle{background:#eef6ff;color:#4f75c9}
+    .symptom-card:nth-child(4) .icon-circle{background:#eefaf1;color:#3b9157}
+    .symptom-card:nth-child(5) .icon-circle{background:#f0fbf2;color:#2e9252}
+    .symptom-card:nth-child(6) .icon-circle{background:#eef3ff;color:#245eb0}
+    .reason-card:nth-child(1) .icon-circle{background:#eef4ff;color:#245eb0}
+    .reason-card:nth-child(2) .icon-circle{background:#eef9f1;color:#169447}
+    .reason-card:nth-child(4) .icon-circle{background:#eef4ff;color:#245eb0}
+
+    .insurance{background:linear-gradient(100deg,#fffdf3 0%,#fff 65%);border:2px solid #f4c75d;border-radius:20px;overflow:hidden;display:grid;box-shadow:0 8px 24px rgba(124,89,15,.06)}
+    .insurance-copy{padding:23px 20px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+    .shield{width:70px;height:78px;display:grid;place-items:center;color:var(--green)}
+    .shield svg{width:70px;height:78px}
+    .insurance h3{margin:0;color:var(--green-dark);font-size:1.25rem;line-height:1.45}
+    .insurance h3 span{display:block;color:var(--blue)}
+    .insurance p{margin:5px 0 0;font-size:.83rem;color:#3d4751}
+    .price-box{grid-column:1/-1;display:flex;align-items:end;justify-content:center;gap:7px;border:2px solid #8eb1d7;border-radius:13px;padding:8px 15px;background:#fff;color:var(--blue-dark);font-weight:900}
+    .price-box small{align-self:center}.price-box strong{font-size:2.6rem;line-height:1}.price-box span{font-size:1.15rem}
+    .insurance-photo{min-height:180px}
+    .insurance-photo img{width:100%;height:100%;object-fit:cover}
+
+    .flow{display:grid;gap:12px;counter-reset:flow}
+    .flow-card{counter-increment:flow;position:relative;padding:18px 16px 17px 64px;min-height:132px}
+    .flow-card::before{content:counter(flow);position:absolute;left:16px;top:17px;width:35px;height:35px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;font-size:1.05rem}
+    .flow-card h3{color:var(--blue);font-size:1rem;margin:0 0 5px}
+    .flow-card p{color:var(--muted);font-size:.82rem;margin:0}
+
+    .content-grid{display:grid;gap:15px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:19px;padding:17px;box-shadow:0 8px 22px rgba(32,73,103,.05)}
+    .panel-title{color:var(--blue);font-size:1.18rem;margin:0 0 13px}
+    .doctor-grid{display:grid;grid-template-columns:110px 1fr;gap:15px;align-items:start}
+    .doctor-grid img{height:190px;object-fit:cover;object-position:center top;border-radius:14px;background:#f3f5f6}
+    .doctor-name{font-size:1rem;font-weight:900;margin-bottom:3px}.doctor-qual{font-size:.78rem;font-weight:800;margin-bottom:9px}.doctor-text{font-size:.8rem;color:#3d4751;margin:0}
+    .facility-grid{display:grid;grid-template-columns:1fr;gap:14px}
+    .facility-item img{height:210px;object-fit:cover;border-radius:12px}.facility-item span{display:block;text-align:center;font-size:.85rem;font-weight:800;margin-top:7px}
+
+    .lower-grid{display:grid;gap:15px}
+    .access-wrap{display:grid;gap:13px}
+    .access-info strong{display:block;font-size:1rem;margin-bottom:8px}.access-info p{font-size:.83rem;margin:5px 0;color:#45515b}
+    .map-art{min-height:230px;border-radius:14px;background-color:#f2eee4;background-image:linear-gradient(28deg,transparent 47%,#fff 48%,#fff 53%,transparent 54%),linear-gradient(152deg,transparent 46%,#fff 47%,#fff 52%,transparent 53%);position:relative;overflow:hidden;border:1px solid #e4dfd2}
+    .map-pin{position:absolute;left:58%;top:34%;width:42px;height:42px;border-radius:50% 50% 50% 0;background:#ef6354;transform:rotate(-45deg);box-shadow:0 7px 14px rgba(93,46,35,.2)}
+    .map-pin::after{content:"";position:absolute;inset:12px;border-radius:50%;background:#fff}
+    .map-label{position:absolute;left:37%;top:56%;background:var(--green);color:#fff;padding:7px 12px;border-radius:7px;font-weight:900;font-size:.82rem}
+    .station-label{position:absolute;left:57%;top:19%;border:2px solid var(--blue);background:#fff;color:var(--blue);padding:4px 9px;border-radius:5px;font-weight:900;font-size:.75rem}
+    .map-button{display:flex;justify-content:center;margin-top:11px;color:var(--blue);font-weight:900;font-size:.83rem}
+
+    details{background:#fff;border:1px solid var(--line);border-radius:13px;padding:0 13px}
+    details+details{margin-top:9px}
+    summary{cursor:pointer;list-style:none;padding:13px 28px 13px 32px;position:relative;font-size:.85rem;font-weight:800}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"Q";position:absolute;left:0;top:11px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:.75rem}
+    summary::after{content:"⌄";position:absolute;right:0;color:var(--blue);font-size:1.1rem}
+    details[open] summary::after{content:"⌃"}
+    details p{margin:0;padding:0 0 13px 32px;color:var(--muted);font-size:.8rem}
+
+    .final-cta{padding:24px 0 86px;background:#fff}
+    .wide-cta{display:grid;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+    .wide-cta a{min-height:68px;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font-weight:900;font-size:1.08rem;padding:12px}
+    .wide-line{background:linear-gradient(135deg,#17a34a,#07853a)}
+    .wide-tel{background:linear-gradient(135deg,#2f70ba,#155297)}
+    footer{background:#0d2636;color:#dce7ee;padding:26px 0 95px;font-size:.77rem}
+    .footer-wrap{display:grid;gap:10px}.footer-title{font-size:1rem;color:#fff;font-weight:900}
+
+    .mobile-bar{position:fixed;z-index:50;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:8px max(9px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom))}
+    .mobile-bar a{min-height:48px;border-radius:10px;color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;font-size:.9rem;font-weight:900;box-shadow:0 5px 14px rgba(24,72,106,.13)}
+    .mobile-bar .line{background:#13a247}.mobile-bar .tel{background:#2565aa}
+
+    @media(min-width:760px){
+      .container{width:min(calc(100% - 48px),var(--max))}
+      .section{padding:78px 0}
+      .nav{height:72px}.desktop-nav{display:flex}.header-tel{display:block}
+      .hero{padding:24px 0 44px}
+      .hero-wrap{width:min(calc(100% - 48px),var(--max));margin-inline:auto;grid-template-columns:.9fr 1.1fr;min-height:500px;align-items:center;gap:28px}
+      .hero-copy{display:block;padding:28px 0;order:1}
+      .hero-actions{grid-template-columns:1fr 1fr;max-width:560px}
+      .hero-photo{min-height:500px;order:2;border-radius:28px}.hero-photo::before{display:none}.hero-photo img{position:absolute;object-position:center 28%}
+      .hero-mobile-overlay{display:none}
+      .license-badge{width:122px;height:122px;right:24px;bottom:24px;font-size:.86rem}
+      .symptoms{grid-template-columns:repeat(6,1fr)}
+      .symptom-card{min-height:154px;padding:19px 10px}.symptom-card strong{font-size:.92rem}
+      .reasons{grid-template-columns:repeat(4,1fr)}
+      .insurance{grid-template-columns:1.35fr .65fr}.insurance-copy{padding:27px 30px;grid-template-columns:auto 1fr auto}.price-box{grid-column:auto;min-width:150px}.insurance-photo{min-height:200px}
+      .flow{grid-template-columns:repeat(4,1fr)}.flow-card{padding:65px 17px 20px}.flow-card::before{left:17px;top:17px}
+      .content-grid{grid-template-columns:1fr 1fr}.panel{padding:22px}.doctor-grid{grid-template-columns:160px 1fr}.doctor-grid img{height:260px}.doctor-text{font-size:.86rem}
+      .facility-grid{grid-template-columns:1fr 1fr}.facility-item img{height:145px}
+      .lower-grid{grid-template-columns:1fr 1fr}.access-wrap{grid-template-columns:.9fr 1.1fr}
+      .wide-cta{grid-template-columns:1.2fr .8fr}.wide-cta a{min-height:88px;font-size:1.28rem}
+      .final-cta{padding-bottom:34px}.mobile-bar{display:none}footer{padding-bottom:30px}.footer-wrap{grid-template-columns:1fr auto;align-items:end}
+    }
+    @media(min-width:1080px){
+      .doctor-grid{grid-template-columns:190px 1fr}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="sample-ribbon">サンプルサイト：写真・料金・院長情報・受付時間は正式情報へ差し替えます</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="brand-mark">近</span><span>近藤接骨院<small>KONDO SEIKOTSUIN</small></span></a>
+      <nav class="desktop-nav" aria-label="メインメニュー"><a href="#symptoms">対応症状</a><a href="#features">選ばれる理由</a><a href="#doctor">院長・設備</a><a href="#access">アクセス</a></nav>
+      <a class="header-tel" href="tel:0742956886">電話で問い合わせ</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-wrap">
+        <div class="hero-copy">
+          <div class="kicker">富雄の皆さまの健康をサポート 🌿</div>
+          <h1>富雄駅前の<br>近藤接骨院</h1>
+          <p class="hero-lead"><strong>スポーツ中のケガ</strong>から<br>日常の身体のお悩みまでご相談ください</p>
+          <div class="hero-badges">
+            <span class="hero-badge green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>土日も営業</span>
+            <span class="hero-badge blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>夜21時まで受付</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-line js-line" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.49 2 2 5.83 2 10.54c0 4.22 3.75 7.75 8.82 8.42.34.07.81.23.93.53.11.28.07.72.04 1.01l-.15.95c-.05.28-.22 1.1.95.6 1.17-.49 6.32-3.72 8.62-6.37C22.79 13.96 22 10.54 22 10.54 22 5.83 17.51 2 12 2Z"/></svg>LINEで予約・相談する</a>
+            <a class="btn btn-tel" href="tel:0742956886"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.4Z"/></svg>電話で問い合わせる</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/hero.webp" alt="施術を行う近藤接骨院の院長イメージ">
+          <div class="hero-mobile-overlay">
+            <div class="kicker">富雄の皆さまの健康をサポート 🌿</div>
+            <h1>富雄駅前の<br>近藤接骨院</h1>
+            <p class="hero-lead"><strong>スポーツ中のケガ</strong>から<br>日常の身体のお悩みまでご相談ください</p>
+            <div class="hero-badges">
+              <span class="hero-badge green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>土日も営業</span>
+              <span class="hero-badge blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>夜21時まで受付</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-line js-line" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.49 2 2 5.83 2 10.54c0 4.22 3.75 7.75 8.82 8.42.34.07.81.23.93.53.11.28.07.72.04 1.01l-.15.95c-.05.28-.22 1.1.95.6 1.17-.49 6.32-3.72 8.62-6.37C22.79 13.96 22 10.54 22 10.54 22 5.83 17.51 2 12 2Z"/></svg>LINEで予約・相談する</a>
+              <a class="btn btn-tel" href="tel:0742956886"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.4Z"/></svg>電話で問い合わせる</a>
+            </div>
+          </div>
+          <div class="license-badge">国家資格者が<br>丁寧に対応<br>いたします</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="symptoms">
+      <div class="container"><div class="section-title"><h2>こんなお悩みありませんか？</h2></div>
+        <div class="cards symptoms">
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="34" cy="9" r="5" fill="#f1c5a5"/><path d="M27 17l10 4 8-2" fill="none" stroke="#234f82" stroke-width="5" stroke-linecap="round"/><path d="M27 18l-8 12 10 7 10 14" fill="none" stroke="#2e68a8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 37L17 50M39 30l10 11" fill="none" stroke="#234f82" stroke-width="6" stroke-linecap="round"/><path d="M14 50h10M46 43h10" stroke="#ef8b43" stroke-width="4" stroke-linecap="round"/></svg></div><strong>スポーツ中の<br>ケガ</strong></article>
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="31" cy="11" r="6" fill="#f2c6a5"/><path d="M23 20q9-6 18 0l3 19-7 15H24l-5-17z" fill="#f6f1e8" stroke="#454c55" stroke-width="3"/><path d="M22 31q7 6 17 2" fill="none" stroke="#6c7580" stroke-width="3"/><path d="M43 31l8 4M43 36l9 3M42 41l8 4" stroke="#55b56a" stroke-width="3" stroke-linecap="round"/><circle cx="42" cy="36" r="4" fill="#f36d5c"/></svg></div><strong>捻挫・打撲</strong></article>
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="29" cy="11" r="6" fill="#efc4a3"/><path d="M19 21q10-7 20 0l3 29H18z" fill="#f3d86a" stroke="#6b5831" stroke-width="3"/><path d="M39 25q6 3 8 10" fill="none" stroke="#4f5c68" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="25" r="4" fill="#efc4a3"/><path d="M48 22l7-4M50 29h8M47 35l7 4" stroke="#65bd67" stroke-width="3" stroke-linecap="round"/><path d="M22 5q8-7 15 1" fill="none" stroke="#365f88" stroke-width="5" stroke-linecap="round"/></svg></div><strong>肩こり</strong></article>
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="31" cy="11" r="6" fill="#efc4a3"/><path d="M20 21q11-7 22 0l3 30H17z" fill="#8acb9a" stroke="#477453" stroke-width="3"/><path d="M38 24q4 5 2 12" fill="none" stroke="#4c5863" stroke-width="4" stroke-linecap="round"/><circle cx="39" cy="22" r="4" fill="#efc4a3"/><path d="M45 20l8-5M47 27h9M44 34l8 5" stroke="#ef8b43" stroke-width="3" stroke-linecap="round"/><path d="M23 6q8-7 16 1" fill="none" stroke="#3f3530" stroke-width="5" stroke-linecap="round"/></svg></div><strong>首の痛み</strong></article>
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="31" cy="11" r="6" fill="#efc4a3"/><path d="M19 21q12-7 24 0l4 28H15z" fill="#76bc87" stroke="#477453" stroke-width="3"/><path d="M17 30q13 10 29 0" fill="none" stroke="#4c5863" stroke-width="4" stroke-linecap="round"/><path d="M22 5q9-7 17 1" fill="none" stroke="#443833" stroke-width="5" stroke-linecap="round"/><path d="M10 23l-5-5M9 31H3M11 39l-6 5" stroke="#ef8b43" stroke-width="3" stroke-linecap="round"/></svg></div><strong>身体の違和感</strong></article>
+          <article class="card symptom-card"><div class="icon-circle"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="#f7fbff" stroke="#255b96" stroke-width="4"/><path d="M32 9l8 12 14 3-10 10 2 15-14-7-14 7 2-15-10-10 14-3z" fill="#fff" stroke="#255b96" stroke-width="3"/><path d="M20 21l12 11 12-11M18 49l14-17 14 17" fill="none" stroke="#5f9bd0" stroke-width="3"/></svg></div><strong>成長や運動後の<br>不調</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container"><div class="section-title"><h2>近藤接骨院が選ばれる理由</h2></div>
+        <div class="cards reasons">
+
+          <article class="card reason-card"><div class="icon-circle"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="10" width="32" height="36" rx="6" fill="#fff" stroke="#245eb0" stroke-width="4"/><path d="M22 18h20M24 38h16" stroke="#245eb0" stroke-width="4" stroke-linecap="round"/><path d="M24 46v6M40 46v6" stroke="#6f7277" stroke-width="4" stroke-linecap="round"/></svg></div><h3>富雄駅前で<br>通いやすい</h3><p>駅からすぐで便利</p></article>
+          <article class="card reason-card"><div class="icon-circle"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="14" width="34" height="30" rx="4" fill="#fff" stroke="#245eb0" stroke-width="4"/><path d="M18 9v10M36 9v10M10 23h34" stroke="#245eb0" stroke-width="4" stroke-linecap="round"/><circle cx="47" cy="42" r="10" fill="#eaf8ef" stroke="#169447" stroke-width="4"/><path d="M47 37v6l4 2" stroke="#169447" stroke-width="4" stroke-linecap="round"/></svg></div><h3>土日も営業・<br>21時まで受付</h3><p>お仕事帰りも安心</p></article>
+          <article class="card reason-card"><div class="icon-circle"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="11" r="5" fill="#245eb0"/><path d="M28 19l10 6 9-1" fill="none" stroke="#245eb0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 19l-8 10 9 7 11 14" fill="none" stroke="#245eb0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 36l-13 12" fill="none" stroke="#245eb0" stroke-width="4" stroke-linecap="round"/><path d="M47 24l8 9" fill="none" stroke="#43b95b" stroke-width="4" stroke-linecap="round"/></svg></div><h3>スポーツの<br>ケガにも対応</h3><p>学生からアスリートまで</p></article>
+          <article class="card reason-card"><div class="icon-circle"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="18" y="8" width="28" height="48" rx="14" fill="#fff" stroke="#245eb0" stroke-width="4"/><path d="M18 32h28" stroke="#245eb0" stroke-width="4"/><path d="M32 8v48" stroke="#8ab6ea" stroke-width="3"/></svg></div><h3>酸素カプセル<br>導入</h3><p>疲労回復をサポート</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="insurance">
+          <div class="insurance-copy">
+            <div class="shield"><svg viewBox="0 0 72 80" fill="none"><path d="M36 4 64 14v21c0 19-11 31-28 41C19 66 8 54 8 35V14L36 4Z" fill="#eaf8ef" stroke="#168b48" stroke-width="4"/><path d="M36 20v34M19 37h34" stroke="#168b48" stroke-width="8" stroke-linecap="round"/></svg></div>
+            <div><h3>外傷の保険治療も可能<span>自費診療で体のケア</span></h3><p>症状に合わせた最適な施術をご提案します</p></div>
+            <div class="price-box"><small>料金</small><strong>00</strong><span>円</span></div>
+          </div>
+          <div class="insurance-photo"><img src="assets/room.webp" alt="近藤接骨院の施術室イメージ"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container"><div class="section-title"><h2>施術の流れ</h2></div>
+        <div class="flow">
+          <article class="card flow-card"><h3>ご予約</h3><p>LINEまたはお電話でご予約ください。</p></article>
+          <article class="card flow-card"><h3>カウンセリング</h3><p>お悩みや生活習慣を丁寧にお伺いします。</p></article>
+          <article class="card flow-card"><h3>状態の確認</h3><p>姿勢・動き・痛みの原因を確認します。</p></article>
+          <article class="card flow-card"><h3>施術・ご説明</h3><p>施術後の説明と今後のケア方法をお伝えします。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="doctor">
+      <div class="container content-grid">
+        <article class="panel"><h2 class="panel-title">院長紹介</h2><div class="doctor-grid"><img src="assets/doctor.webp" alt="近藤接骨院の院長イメージ"><div><div class="doctor-name">近藤 真人 <small>（サンプル）</small></div><div class="doctor-qual">柔道整復師（国家資格）</div><p class="doctor-text">身体の悩みに真摯に向き合う施術を心がけています。丁寧な説明と分かりやすいご案内で、一人ひとりに寄り添い、健やかな毎日をサポートします。</p></div></div></article>
+        <article class="panel"><h2 class="panel-title">院内・設備</h2><div class="facility-grid">
+          <div class="facility-item"><img src="assets/room.webp" alt="施術ベッド"><span>施術ベッド</span></div>
+          <div class="facility-item"><img src="assets/oxygen.webp" alt="酸素カプセル"><span>酸素カプセル</span></div>
+          <div class="facility-item"><img src="assets/clinic.webp" alt="明るい院内"><span>明るく清潔な院内</span></div>
+          <div class="facility-item"><img src="assets/kids.webp" alt="キッズスペース"><span>キッズスペース</span></div>
+        </div></article>
+      </div>
+    </section>
+
+    <section class="section" id="access">
+      <div class="container lower-grid">
+        <article class="panel"><h2 class="panel-title">アクセス</h2><div class="access-wrap"><div class="access-info"><strong>富雄駅からすぐ</strong><p>近鉄奈良線「富雄駅」徒歩1分</p><p>駅前ロータリーすぐで通いやすい立地です。</p><p><b>住所：</b>奈良県奈良市富雄元町2-3-31<br>富喜和第二ビル2階</p><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=%E8%BF%91%E8%97%A4%E6%8E%A5%E9%AA%A8%E9%99%A2+%E5%A5%88%E8%89%AF%E5%B8%82%E5%AF%8C%E9%9B%84%E5%85%83%E7%94%BA2-3-31" target="_blank" rel="noopener">詳しいアクセスを見る →</a></div><div class="map-art"><span class="station-label">富雄駅</span><span class="map-pin"></span><span class="map-label">近藤接骨院</span></div></div></article>
+        <article class="panel"><h2 class="panel-title">よくある質問</h2>
+          <details><summary>予約は必要ですか？</summary><p>予約優先を想定しています。LINEまたは電話でご連絡いただくとスムーズです。</p></details>
+          <details><summary>健康保険は使えますか？</summary><p>原因が明確な外傷は保険適用となる場合があります。状態を確認してご案内します。</p></details>
+          <details><summary>どのような服装で行けばいいですか？</summary><p>動きやすい服装がおすすめです。詳しくはご予約時にご確認ください。</p></details>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta"><div class="container"><div class="wide-cta"><a class="wide-line js-line" href="#">LINEで予約・相談する →</a><a class="wide-tel" href="tel:0742956886">☎ 電話する</a></div></div></section>
+  </main>
+
+  <footer><div class="container footer-wrap"><div><div class="footer-title">近藤接骨院</div>奈良県奈良市富雄元町2-3-31 富喜和第二ビル2階</div><div>© KONDO SEIKOTSUIN / SAMPLE</div></div></footer>
+
+  <div class="mobile-bar"><a class="line js-line" href="#">LINE予約</a><a class="tel" href="tel:0742956886">電話する</a></div>
+  <script>
+    document.querySelectorAll('.js-line').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();alert('ここに近藤接骨院の公式LINE URLを設定します。');});});
+  </script>
+</body>
+</html>
