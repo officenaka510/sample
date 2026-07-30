@@ -214,7 +214,7 @@ input {
 
 .hero-photo {
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center top;
 }
 
 .hero-shade {
@@ -732,13 +732,20 @@ input {
 
 .director-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  min-height: 660px;
+  grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  align-items: stretch;
+  width: var(--page);
+  max-width: 1120px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 110px 0;
 }
 
 .director-photo {
   position: relative;
-  min-height: 520px;
+  height: 560px;
+  min-height: 0;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
   overflow: hidden;
 }
 
@@ -765,7 +772,9 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(50px, 7vw, 110px);
+  height: 560px;
+  padding: 46px clamp(38px, 5vw, 62px);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   background: var(--green-50);
 }
 
@@ -1084,7 +1093,8 @@ input {
 
 .hours-row:not(.head) strong {
   color: var(--ink);
-  font-size: 11px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 .hours-card > p {
@@ -1387,6 +1397,20 @@ footer > small {
 
   .concern-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .director-section {
+    grid-template-columns: minmax(300px, 38%) minmax(0, 1fr);
+    padding: 86px 0;
+  }
+
+  .director-photo,
+  .director-copy {
+    height: 540px;
+  }
+
+  .director-copy {
+    padding: 38px;
   }
 
   .reason-grid {
@@ -1750,14 +1774,19 @@ footer > small {
   .director-section {
     grid-template-columns: 1fr;
     min-height: 0;
+    padding: 78px 0;
   }
 
   .director-photo {
+    height: 400px;
     min-height: 400px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
 
   .director-copy {
+    height: auto;
     padding: 58px 25px 65px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   }
 
   .director-greeting {
@@ -1820,24 +1849,30 @@ footer > small {
     padding: 18px 12px;
   }
 
+  .hours-card h3 {
+    margin-bottom: 14px;
+    font-size: 21px;
+  }
+
   .hours-row {
-    grid-template-columns: 1.55fr repeat(7, 0.55fr);
+    grid-template-columns: 92px repeat(7, minmax(0, 1fr));
   }
 
   .hours-row > * {
-    padding: 8px 1px;
+    padding: 12px 1px;
   }
 
   .hours-row.head {
-    font-size: 8px;
-  }
-
-  .hours-row:not(.head) {
     font-size: 10px;
   }
 
+  .hours-row:not(.head) {
+    font-size: 13px;
+  }
+
   .hours-row:not(.head) strong {
-    font-size: 8px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
   }
 
   .map-wrap {
@@ -1873,7 +1908,7 @@ footer > small {
     bottom: 0;
     left: 0;
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     min-height: 66px;
     border-top: 1px solid rgba(255, 255, 255, 0.28);
     box-shadow: 0 -5px 24px rgba(13, 48, 46, 0.2);
@@ -1887,6 +1922,7 @@ footer > small {
     color: var(--white);
     font-size: 12px;
     font-weight: 900;
+    text-align: center;
   }
 
   .mobile-fixed-cta a:first-child {
