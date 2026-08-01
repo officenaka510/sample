@@ -989,7 +989,8 @@ input {
 
 .flow-card figure img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -1064,7 +1065,8 @@ input {
 
 .gallery-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -1585,6 +1587,7 @@ footer > small { font-family: Arial, sans-serif; font-size: 9px; letter-spacing:
   .clinic-gallery::-webkit-scrollbar { display: none; }
   .gallery-card { flex: 0 0 calc(50% - 8px); scroll-snap-align: start; }
   .gallery-arrow, .gallery-dots { display: flex; }
+  .flow-dots { display: none; }
   .gallery-arrow { display: grid; place-items: center; }
 
   .access-section { grid-template-columns: 1fr; }
@@ -1799,7 +1802,12 @@ footer > small { font-family: Arial, sans-serif; font-size: 9px; letter-spacing:
   .flow-shell { width: 100%; }
   .flow-arrow { display: none; }
   .flow-card { flex-basis: calc(82% - 10px); }
-  .flow-card figure img { aspect-ratio: 16 / 9; }
+  .flow-card figure img {
+    height: clamp(165px, 46vw, 190px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
   .flow-card > div { padding: 27px 17px 20px; }
   .flow-card h3 { font-size: 18px; }
   .flow-card p { font-size: 15px; line-height: 1.8; }
@@ -1808,11 +1816,17 @@ footer > small { font-family: Arial, sans-serif; font-size: 9px; letter-spacing:
   .gallery-shell { width: 100%; }
   .clinic-gallery { gap: 13px; padding: 4px 24px 16px; scroll-padding-inline: 24px; }
   .gallery-card { flex-basis: calc(82% - 10px); border-radius: 16px; }
-  .gallery-card img { aspect-ratio: 16 / 9; }
+  .gallery-card img {
+    height: clamp(165px, 46vw, 190px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
   .gallery-card strong { font-size: 18px; }
   .gallery-card span { font-size: 14px; line-height: 1.7; }
   .gallery-arrow { display: none; }
   .gallery-dots { display: flex; margin-top: 5px; }
+  .flow-dots { display: flex; }
   .swipe-hint { display: block; font-size: 12px; }
 
   .access-content { padding: 68px 24px 58px; }

@@ -101,7 +101,7 @@ window.addEventListener(
 
 const gallery = document.querySelector(".clinic-gallery");
 const cards = [...gallery.querySelectorAll(".gallery-card")];
-const dots = [...document.querySelectorAll(".gallery-dots button")];
+const dots = [...document.querySelectorAll(".clinic-section .gallery-dots button")];
 const previousButton = document.querySelector(".gallery-arrow.prev");
 const nextButton = document.querySelector(".gallery-arrow.next");
 
@@ -152,6 +152,7 @@ updateDots();
 
 const flowGallery = document.querySelector(".flow-gallery");
 const flowCards = [...flowGallery.querySelectorAll(".flow-card")];
+const flowDots = [...document.querySelectorAll(".flow-dots button")];
 const flowPreviousButton = document.querySelector(".flow-arrow.prev");
 const flowNextButton = document.querySelector(".flow-arrow.next");
 
@@ -161,19 +162,38 @@ function flowCardStep() {
   return flowCards[0].getBoundingClientRect().width + flowGap;
 }
 
-function updateFlowArrows() {
+function flowActiveIndex() {
+  const step = flowCardStep();
+  if (!step) return 0;
+  return Math.max(0, Math.min(flowCards.length - 1, Math.round(flowGallery.scrollLeft / step)));
+}
+
+function updateFlowState() {
   const maximumScroll = flowGallery.scrollWidth - flowGallery.clientWidth;
   flowPreviousButton.disabled = flowGallery.scrollLeft <= 4;
   flowNextButton.disabled = flowGallery.scrollLeft >= maximumScroll - 4;
+  const current = flowActiveIndex();
+  flowDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === current);
+    dot.setAttribute("aria-current", index === current ? "true" : "false");
+  });
+}
+
+function goToFlowCard(index) {
+  flowGallery.scrollTo({
+    left: flowCardStep() * Math.max(0, Math.min(flowCards.length - 1, index)),
+    behavior: "smooth",
+  });
 }
 
 function moveFlow(direction) {
-  flowGallery.scrollBy({ left: flowCardStep() * direction, behavior: "smooth" });
+  goToFlowCard(flowActiveIndex() + direction);
 }
 
 flowPreviousButton.addEventListener("click", () => moveFlow(-1));
 flowNextButton.addEventListener("click", () => moveFlow(1));
-flowGallery.addEventListener("scroll", updateFlowArrows, { passive: true });
+flowDots.forEach((dot, index) => dot.addEventListener("click", () => goToFlowCard(index)));
+flowGallery.addEventListener("scroll", updateFlowState, { passive: true });
 flowGallery.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     event.preventDefault();
@@ -185,8 +205,8 @@ flowGallery.addEventListener("keydown", (event) => {
   }
 });
 
-window.addEventListener("resize", updateFlowArrows, { passive: true });
-updateFlowArrows();
+window.addEventListener("resize", updateFlowState, { passive: true });
+updateFlowState();
 
 const revealGroups = [
   ".section-heading",
