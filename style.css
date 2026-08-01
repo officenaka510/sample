@@ -1798,16 +1798,17 @@ footer > small { font-family: Arial, sans-serif; font-size: 9px; letter-spacing:
 
   .flow-shell { width: 100%; }
   .flow-arrow { display: none; }
-  .flow-card { flex-basis: calc(88% - 12px); }
-  .flow-card > div { padding: 31px 19px 23px; }
+  .flow-card { flex-basis: calc(82% - 10px); }
+  .flow-card figure img { aspect-ratio: 16 / 9; }
+  .flow-card > div { padding: 27px 17px 20px; }
   .flow-card h3 { font-size: 18px; }
   .flow-card p { font-size: 15px; line-height: 1.8; }
   .flow-sample-note { font-size: 12px; }
 
   .gallery-shell { width: 100%; }
   .clinic-gallery { gap: 13px; padding: 4px 24px 16px; scroll-padding-inline: 24px; }
-  .gallery-card { flex-basis: calc(88% - 12px); border-radius: 16px; }
-  .gallery-card img { aspect-ratio: 16 / 11; }
+  .gallery-card { flex-basis: calc(82% - 10px); border-radius: 16px; }
+  .gallery-card img { aspect-ratio: 16 / 9; }
   .gallery-card strong { font-size: 18px; }
   .gallery-card span { font-size: 14px; line-height: 1.7; }
   .gallery-arrow { display: none; }
