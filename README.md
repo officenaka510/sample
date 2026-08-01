@@ -2,41 +2,42 @@
 
 GitHubへそのままアップロードできる静的サイトです。
 
-## 公開前に必ず変更する箇所
+## 公開前に確認・変更する箇所
 
-1. `script.js` 冒頭の `PHONE_NUMBER` と `LINE_URL`
-2. `index.html` 内の院長名、正式住所、料金、受付時間
-3. `assets` 内のサンプル写真
+1. `script.js` 冒頭の `LINE_URL` に正式なLINE URLを設定
+2. `index.html` 内の院長名「近藤 ○○」を正式な氏名へ変更
+3. 2026年8月10日の撮影後、下記のサンプル写真を実際の写真へ差し替え
+4. 料金・受付時間・住所・電話番号の最終確認
 
-写真は、同じファイル名で上書きするとHTMLを変更せずに差し替えできます。
+写真は、同じファイル名で上書きするとHTMLを変更せずに差し替えられます。
 
 - `hero.webp`：トップの施術写真
 - `doctor.webp`：院長写真
-- `interior.webp`：施術室写真
-- `oxygen.webp`：酸素カプセル写真
+- `flow-reception.webp`：受付
+- `flow-counseling.webp`：カウンセリング
+- `flow-check.webp`：状態の確認
+- `flow-treatment.webp`：施術
+- `flow-advice.webp`：施術後のアドバイス
+- `facility-reception.webp`：受付設備
+- `facility-waiting.webp`：待合室
+- `facility-treatment.webp`：施術室
+- `facility-oxygen.webp`：酸素カプセル
 
-## GitHubへアップロードする方法
+## GitHubへ上書きする方法
 
-ZIPを解凍し、このフォルダ内の `index.html`、`style.css`、`script.js`、`assets` をリポジトリの一番上の階層へアップロードします。ZIPファイルそのものではなく、解凍後の中身をアップロードしてください。
+ZIPを解凍し、フォルダ内の `index.html`、`style.css`、`script.js`、`README.md`、`assets` を、GitHubリポジトリの一番上の階層へまとめてアップロードしてください。
+
+同じ名前のファイルがある場合は、新しいファイルで上書きします。ZIPファイルそのものはアップロードせず、解凍後の中身をアップロードしてください。
 
 ## 素材について
 
 - 院長・施術・院内・酸素カプセルの写真はAI生成の架空サンプルです。実在の院長・患者さま・院内写真ではありません。
-- 症状イラストは「ソコスト」の配布素材を、2026年7月30日時点の利用規約に基づきダウンロードして同梱しています。著作権はソコスト運営者に帰属します。本サイト以外への素材単体での再配布・販売はしないでください。
+- 症状イラストは「ソコスト」の配布素材を、2026年7月30日時点の利用規約に基づき同梱しています。著作権はソコスト運営者に帰属します。本サイト以外への素材単体での再配布・販売はしないでください。
 - 利用規約：https://soco-st.com/guide
 
-## ファイル構成
+## 現在設定済みの情報
 
-```text
-kondo-seikotsuin/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets/
-    ├── hero.webp
-    ├── doctor.webp
-    ├── interior.webp
-    ├── oxygen.webp
-    └── icon-*.png
-```
+- 電話番号：0742-95-6886
+- 住所：奈良県奈良市富雄元町2-3-31 2階
+- 受付時間：9時–13時／15時–21時
+- 定休日：木曜日

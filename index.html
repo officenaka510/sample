@@ -5,35 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="富雄駅前の近藤接骨院。スポーツ中のケガから日常の身体のお悩みまで、丁寧にお話を伺いながらサポートします。"
+      content="富雄駅前の近藤接骨院。スポーツ中のケガから日常のお体のお悩み、交通事故までご相談ください。土日も夜21時まで受付。"
     />
-    <meta name="theme-color" content="#173f3b" />
+    <meta name="theme-color" content="#1236d8" />
     <title>近藤接骨院｜富雄駅前・土日も夜21時まで</title>
+    <link rel="icon" href="assets/kondo-logo-clean-v1.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="近藤接骨院 トップへ">
-        <span class="brand-mark">K</span>
+        <img class="brand-logo" src="assets/kondo-logo-clean-v1.png" alt="" width="52" height="52" />
         <span>
           <strong>近藤接骨院</strong>
-          <small>KONDO SEIKOTSUIN</small>
         </span>
       </a>
+
       <nav class="desktop-nav" aria-label="メインメニュー">
         <a href="#about">お悩み</a>
         <a href="#reasons">選ばれる理由</a>
         <a href="#menu">施術メニュー</a>
+        <a href="#flow">ご来院の流れ</a>
         <a href="#clinic">院内・設備</a>
         <a href="#access">アクセス</a>
       </nav>
-      <a class="header-phone js-phone-link" href="#contact">
+
+      <a class="header-phone js-phone-link" href="tel:0742956886">
         <span class="header-phone-icon" aria-hidden="true">☎</span>
         <span>
           <small>お電話でのお問い合わせ</small>
-          <strong class="js-phone-text">000-0000-0000</strong>
+          <strong class="js-phone-text">0742-95-6886</strong>
         </span>
       </a>
+
       <button
         class="mobile-menu-toggle"
         type="button"
@@ -41,9 +45,7 @@
         aria-controls="mobile-menu"
         aria-label="メニューを開く"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </header>
 
@@ -55,17 +57,12 @@
         <a href="#reasons"><span>02</span>選ばれる理由</a>
         <a href="#menu"><span>03</span>施術メニュー</a>
         <a href="#director"><span>04</span>院長紹介</a>
-        <a href="#clinic"><span>05</span>院内・設備</a>
-        <a href="#access"><span>06</span>アクセス・営業時間</a>
+        <a href="#flow"><span>05</span>ご来院の流れ</a>
+        <a href="#clinic"><span>06</span>院内・設備</a>
+        <a href="#access"><span>07</span>アクセス・受付時間</a>
         <div class="mobile-menu-actions">
-          <a class="js-phone-link" href="#contact">
-            <small>TEL</small>
-            電話で問い合わせ
-          </a>
-          <a class="js-line-link" href="#contact">
-            <small>LINE</small>
-            LINEで予約・相談
-          </a>
+          <a class="js-phone-link" href="tel:0742956886"><small>TEL</small>電話で問い合わせ</a>
+          <a class="js-line-link" href="#contact"><small>LINE</small>LINEで予約・相談</a>
         </div>
       </nav>
     </div>
@@ -75,7 +72,7 @@
         <img
           class="hero-photo"
           src="assets/hero.webp"
-          alt="院長が患者さまの肩の状態を確認している様子（サンプル写真）"
+          alt="施術者が身体の状態を確認している様子（サンプル写真）"
           width="768"
           height="512"
         />
@@ -84,24 +81,24 @@
           <p class="hero-eyebrow"><span>地域の皆さまの健康をサポート</span></p>
           <h1>
             <span>富雄駅前の</span>
-            <strong>近藤接骨院</strong>
+            <strong class="hero-clinic-name">
+              <span class="hero-clinic-name-main">近藤</span><span class="hero-clinic-name-type">接骨院</span>
+            </strong>
           </h1>
           <p class="hero-copy">
-            <span>日常の身体のお悩みから</span>
-            <span>スポーツ中のケガまでご相談ください</span>
+            <span>スポーツ中のケガから日常のお体のお悩み、</span>
+            <span>交通事故までご相談ください</span>
           </p>
-          <div class="hero-badges" aria-label="診療時間の特徴">
+          <div class="hero-badges" aria-label="受付時間の特徴">
             <span>土日も営業</span>
             <span>夜21時まで受付</span>
           </div>
           <div class="hero-actions">
             <a class="button button-line js-line-link" href="#contact">
-              <span class="button-label">LINE</span>
-              予約・相談する
+              <span class="button-label">LINE</span>予約・相談する
             </a>
-            <a class="button button-phone js-phone-link" href="#contact">
-              <span class="button-label">TEL</span>
-              電話で問い合わせる
+            <a class="button button-phone js-phone-link" href="tel:0742956886">
+              <span class="button-label">TEL</span>電話で問い合わせる
             </a>
           </div>
         </div>
@@ -115,47 +112,38 @@
           <span></span>
         </div>
         <p class="section-lead">
-          スポーツ中のケガはもちろん、日常生活で感じる身体の不調まで。
-          まずは今の状態や気になることをお聞かせください。
+          スポーツ中のケガはもちろん、日常生活で感じる身体のお悩みや交通事故後のご相談まで、
+          まずは気になることをお聞かせください。
         </p>
 
         <div class="concern-grid">
           <article class="concern-card">
-            <div class="concern-illustration">
-              <img src="assets/icon-shoulder.png" alt="" />
-            </div>
+            <div class="concern-illustration"><img src="assets/icon-shoulder.png" alt="" /></div>
             <h3>首・肩のつらさ</h3>
-            <p>デスクワークや家事で感じる首・肩まわりの不調</p>
+            <p>デスクワークや家事で感じる首・肩まわりのお悩み</p>
           </article>
           <article class="concern-card">
-            <div class="concern-illustration">
-              <img src="assets/icon-lowerback.png" alt="" />
-            </div>
+            <div class="concern-illustration"><img src="assets/icon-lowerback.png" alt="" /></div>
             <h3>腰の違和感</h3>
             <p>立ち仕事や日常動作で気になる腰まわりのお悩み</p>
           </article>
           <article class="concern-card">
-            <div class="concern-illustration">
-              <img src="assets/icon-knee.png" alt="" />
-            </div>
+            <div class="concern-illustration"><img src="assets/icon-knee-v2.png" alt="" /></div>
             <h3>膝・足の不調</h3>
             <p>歩行や階段、運動時に感じる膝・足まわりの不調</p>
           </article>
           <article class="concern-card">
-            <div class="concern-illustration">
-              <img src="assets/icon-sports.png" alt="" />
-            </div>
+            <div class="concern-illustration"><img src="assets/icon-sports.png" alt="" /></div>
             <h3>スポーツ中のケガ</h3>
-            <p>捻挫・打撲など、部活動やスポーツでの急なケガ</p>
+            <p>骨折・捻挫・打撲・肉離れなど、スポーツでの急なケガ</p>
           </article>
           <article class="concern-card">
-            <div class="concern-illustration">
-              <img src="assets/icon-accident.png" alt="" />
-            </div>
-            <h3>事故後のご相談</h3>
-            <p>交通事故などのあとに気になる身体の違和感</p>
+            <div class="concern-illustration"><img src="assets/icon-accident.png" alt="" /></div>
+            <h3>交通事故後のご相談</h3>
+            <p>交通事故後に気になる痛みや身体の違和感</p>
           </article>
         </div>
+
         <div class="about-message">
           <span aria-hidden="true">“</span>
           <p>
@@ -173,28 +161,29 @@
         </div>
         <div class="reason-grid">
           <article class="reason-card">
-            <b>01</b>
-            <div class="reason-symbol">駅</div>
+            <b>01</b><div class="reason-symbol">駅</div>
             <h3>富雄駅前</h3>
             <p>駅から通いやすく、学校や仕事の帰りにも立ち寄りやすい立地です。</p>
           </article>
           <article class="reason-card">
-            <b>02</b>
-            <div class="reason-symbol">21</div>
+            <b>02</b><div class="reason-symbol">21</div>
             <h3>土日も21時まで</h3>
-            <p>忙しい方にも通っていただきやすい受付時間を設けています。</p>
+            <p>平日が忙しい方や、学校・仕事帰りの方にも通いやすい受付時間です。</p>
           </article>
           <article class="reason-card">
-            <b>03</b>
-            <div class="reason-symbol">資格</div>
-            <h3>国家資格者が対応</h3>
-            <p>柔道整復師が身体の状態を確認し、分かりやすく説明します。</p>
+            <b>03</b><div class="reason-symbol">資格</div>
+            <h3>柔道整復師が対応</h3>
+            <p>国家資格を持つ院長が、身体の状態と施術内容を分かりやすく説明します。</p>
           </article>
           <article class="reason-card">
-            <b>04</b>
-            <div class="reason-symbol">＋</div>
+            <b>04</b><div class="reason-symbol">＋</div>
             <h3>ケガからケアまで</h3>
-            <p>外傷のご相談から日々のコンディショニングまで幅広く対応します。</p>
+            <p>外傷、自費による身体のケア、スポーツコンディショニングまで幅広く対応します。</p>
+          </article>
+          <article class="reason-card">
+            <b>05</b><div class="reason-symbol">事故</div>
+            <h3>交通事故後のご相談にも対応</h3>
+            <p>交通事故後のお身体の不調や施術についてもご相談いただけます。現在の状況を丁寧に伺い、必要なご案内を行います。</p>
           </article>
         </div>
       </section>
@@ -205,159 +194,159 @@
           <h2>施術メニュー</h2>
           <span></span>
         </div>
+        <p class="section-lead">お悩みや目的に合わせて、4つのメニューをご案内しています。</p>
+
         <div class="menu-grid">
           <article class="menu-card insurance-card">
-            <div class="menu-tag">ケガをした方へ</div>
-            <div class="menu-number">01</div>
+            <div class="menu-tag">急なケガをした方へ</div><div class="menu-number">01</div>
             <h3>外傷の保険施術</h3>
             <p class="menu-summary">
-              捻挫・打撲・挫傷など、原因が明確な急性の外傷は健康保険を利用できる場合があります。
+              原因が明確な急性の外傷は、健康保険を利用できる場合があります。受傷状況を伺い、適用についてご案内します。
             </p>
-            <ul>
-              <li>スポーツ中の捻挫・打撲</li>
-              <li>日常生活での急なケガ</li>
-              <li>状態の確認と施術方針のご説明</li>
-            </ul>
-            <div class="price">
-              <small>料金</small>
-              <strong>保険負担割合による</strong>
+            <div class="injury-tags" aria-label="主な外傷"><span>骨折</span><span>捻挫</span><span>打撲</span><span>肉離れ</span></div>
+            <div class="price-panel">
+              <small>料金</small><strong>保険の負担割合・施術部位による</strong>
             </div>
-            <p class="menu-note">※保険の適用条件は受傷状況により異なります。</p>
+            <p class="menu-note">
+              ※保険の適用条件は負傷原因や状態により異なります。骨折は応急手当を除き、医師の同意が必要です。
+            </p>
           </article>
 
           <article class="menu-card private-card">
-            <div class="menu-tag">身体を整えたい方へ</div>
-            <div class="menu-number">02</div>
-            <h3>自費施術・身体のケア</h3>
+            <div class="menu-tag">日常のケア・コンディショニング</div><div class="menu-number">02</div>
+            <h3>自費施術</h3>
             <p class="menu-summary">
-              日常の身体のお悩みやスポーツ前後のコンディショニングなど、目的に合わせてケアします。
+              日常のお体のお悩みやスポーツ前後のコンディショニングなど、目的に合わせて身体をケアします。
             </p>
-            <ul>
-              <li>肩・腰など日常的なお悩み</li>
-              <li>スポーツコンディショニング</li>
-              <li>一人ひとりに合わせた身体のケア</li>
-            </ul>
-            <div class="price">
-              <small>料金</small>
-              <strong>0,000円〜 <em>（仮）</em></strong>
+            <div class="pricing-table" role="table" aria-label="自費施術料金">
+              <div class="pricing-row pricing-head" role="row"><span></span><strong>一般</strong><strong>学割</strong></div>
+              <div class="pricing-row" role="row"><span>通常1回</span><strong>5,300円</strong><strong>3,700円</strong></div>
+              <div class="pricing-row" role="row"><span>月額プラン</span><strong>9,700円</strong><strong>7,000円</strong></div>
+              <div class="pricing-row" role="row"><span>プラン利用時／1回</span><strong>2,000円</strong><strong>1,500円</strong></div>
             </div>
-            <p class="menu-note">※正式なメニュー名・料金へ差し替えてください。</p>
+            <p class="menu-note">
+              ※月額料金に加え、施術ごとにプラン利用料金が必要です。月2回以上利用される方向けのプランです。
+            </p>
           </article>
-        </div>
-        <div class="oxygen-banner">
-          <div>
-            <span>OPTION</span>
-            <h3>酸素カプセルもご利用いただけます</h3>
-            <p>利用時間・料金など、詳しくは院までお問い合わせください。</p>
-          </div>
-          <img
-            src="assets/oxygen.webp"
-            alt="酸素カプセル（サンプル写真）"
-            width="768"
-            height="512"
-            loading="lazy"
-          />
+
+          <article class="menu-card accident-card">
+            <div class="menu-tag">交通事故後の身体のお悩み</div><div class="menu-number">03</div>
+            <h3>交通事故施術</h3>
+            <p class="menu-summary">
+              交通事故後の痛みや違和感についてご相談いただけます。保険会社への連絡や通院についても分かりやすくご案内します。
+            </p>
+            <ul class="check-list">
+              <li>事故後に感じる首・腰などの違和感</li>
+              <li>保険会社との手続きに関するご相談</li>
+              <li>自賠責保険が適用される場合があります</li>
+            </ul>
+            <div class="price-panel accident-price">
+              <small>自賠責保険適用の場合</small><strong>窓口負担 0円となる場合があります</strong>
+            </div>
+            <p class="menu-note">※事故状況・保険会社との契約内容・適用条件により異なります。まずはお問い合わせください。</p>
+          </article>
+
+          <article class="menu-card oxygen-card">
+            <div class="menu-tag">身体のケア・リフレッシュ</div><div class="menu-number">04</div>
+            <h3>酸素カプセル</h3>
+            <p class="menu-summary">部活動・勉強・仕事などで疲労感が気になる方に。初めての方にはお試しプランもご用意しています。</p>
+            <div class="oxygen-prices">
+              <div class="trial-price"><span>初回お試し</span><strong>30分 <em>980円</em></strong></div>
+              <div class="pricing-table compact" role="table" aria-label="酸素カプセル料金">
+                <div class="pricing-row pricing-head" role="row"><span></span><strong>一般</strong><strong>学割</strong></div>
+                <div class="pricing-row" role="row"><span>都度／10分</span><strong>1,000円</strong><strong>600円</strong></div>
+                <div class="pricing-row" role="row"><span>10分×11枚</span><strong>10,000円</strong><strong>6,000円</strong></div>
+                <div class="pricing-row" role="row"><span>30分×12枚</span><strong>30,000円</strong><strong>18,000円</strong></div>
+                <div class="pricing-row" role="row"><span>月額入り放題</span><strong>10,000円</strong><strong>6,000円</strong></div>
+              </div>
+            </div>
+            <p class="menu-note">※月額入り放題は一般・学割とも各20名限定です。利用条件は院までお問い合わせください。</p>
+          </article>
         </div>
       </section>
 
       <section class="director-section" id="director">
         <div class="director-photo">
-          <img
-            src="assets/doctor.webp"
-            alt="近藤接骨院の院長（サンプル写真）"
-            width="768"
-            height="512"
-            loading="lazy"
-          />
+          <img src="assets/doctor.webp" alt="近藤接骨院の院長（サンプル写真）" width="768" height="512" loading="lazy" />
           <span>PHOTO SAMPLE</span>
         </div>
         <div class="director-copy">
-          <div class="section-heading align-left">
-            <p>DIRECTOR</p>
-            <h2>院長紹介</h2>
-            <span></span>
-          </div>
-          <p class="director-greeting">
-            「来てよかった」と思っていただけるよう、<br />
-            お話を丁寧に伺うことを大切にしています。
+          <div class="section-heading align-left"><p>DIRECTOR</p><h2>院長紹介</h2><span></span></div>
+          <p class="director-greeting">臨床現場とスポーツ現場で培った経験を、日々の施術に。</p>
+          <p>
+            大学卒業後、スポーツ整形外科に入職。約7年間の勤務を通じて、スポーツ外傷や整形外科領域に関する知識・技術を磨き、多くの患者さまへの対応に携わりました。そこで培った医学的知識と臨床現場での経験を、現在の施術や身体のケアに活かしています。
           </p>
           <p>
-            身体のお悩みは、同じように見えても一人ひとり違います。
-            近藤接骨院では、気になることや不安なことを伺い、身体の状態と施術内容をできるだけ分かりやすくお伝えします。
-            スポーツをしている方も、日常の身体のお悩みをお持ちの方も、お気軽にご相談ください。
+            現在は奈良県のバスケットボールチーム「ヤマトライジング」の選手をはじめ、プロ野球選手など競技に取り組む方々の身体のケアやコンディショニングにも携わっています。また、森ノ宮医療学園専門学校では講師として、資格取得を目指す学生の指導にもあたっています。
           </p>
           <div class="director-name">
-            <small>柔道整復師／院長</small>
-            <strong>近藤 ○○</strong>
-            <span>※氏名・経歴は公開前に差し替え</span>
+            <small>柔道整復師（国家資格）／院長</small>
+            <strong>近藤 賢</strong>
+            <span>こんどう すぐる</span>
           </div>
         </div>
       </section>
 
-      <section class="section clinic-section" id="clinic">
+      <section class="section flow-section" id="flow">
         <div class="section-heading">
-          <p>CLINIC</p>
-          <h2>院内・設備</h2>
+          <p>FIRST VISIT</p>
+          <h2>ご来院の流れ</h2>
           <span></span>
         </div>
-        <p class="section-lead">
-          初めての方にも安心してお越しいただけるよう、院内の雰囲気をご紹介します。
-        </p>
+        <p class="section-lead">初めての方にも安心してご相談いただけるよう、施術までの流れをご紹介します。</p>
+
+        <div class="flow-shell">
+          <button class="flow-arrow prev" type="button" aria-label="前の流れを見る">‹</button>
+          <div class="flow-gallery" tabindex="0" aria-label="ご来院の流れ">
+            <article class="flow-card">
+              <figure><img src="assets/flow-reception.webp" alt="受付のイメージ（サンプル写真）" width="768" height="512" loading="lazy" /><span>01</span></figure>
+              <div><h3>受付</h3><p>ご来院後、受付でお名前をお伝えください。初めての方には、現在のお悩みなどをご記入いただきます。</p></div>
+            </article>
+            <article class="flow-card">
+              <figure><img src="assets/flow-counseling.webp" alt="カウンセリングのイメージ（サンプル写真）" width="768" height="512" loading="lazy" /><span>02</span></figure>
+              <div><h3>カウンセリング</h3><p>お体のお悩みや痛めたきっかけ、日常生活で困っていることなどを丁寧に伺います。</p></div>
+            </article>
+            <article class="flow-card">
+              <figure><img src="assets/flow-check.webp" alt="状態を確認するイメージ（サンプル写真）" width="768" height="512" loading="lazy" /><span>03</span></figure>
+              <div><h3>状態の確認</h3><p>身体の動きや痛みの出方などを確認し、現在の状態と施術内容を分かりやすくご説明します。</p></div>
+            </article>
+            <article class="flow-card">
+              <figure><img src="assets/flow-treatment.webp" alt="施術のイメージ（サンプル写真）" width="768" height="512" loading="lazy" /><span>04</span></figure>
+              <div><h3>施術</h3><p>お体の状態やご希望に合わせて、一人ひとりに適した施術を行います。</p></div>
+            </article>
+            <article class="flow-card">
+              <figure><img src="assets/flow-advice.webp" alt="施術後の説明のイメージ（サンプル写真）" width="768" height="512" loading="lazy" /><span>05</span></figure>
+              <div><h3>施術後のアドバイス</h3><p>施術後の状態を確認し、ご自宅でできるケアや今後の通院についてお伝えします。</p></div>
+            </article>
+          </div>
+          <button class="flow-arrow next" type="button" aria-label="次の流れを見る">›</button>
+        </div>
+        <p class="flow-sample-note">写真は8月10日撮影予定のため、現在はイメージ写真を使用しています。</p>
+        <p class="swipe-hint flow-swipe-hint"><span>←</span> 横にスワイプしてご覧いただけます <span>→</span></p>
+      </section>
+
+      <section class="section clinic-section" id="clinic">
+        <div class="section-heading"><p>CLINIC</p><h2>院内・設備</h2><span></span></div>
+        <p class="section-lead">初めての方にも安心してお越しいただけるよう、院内の雰囲気をご紹介します。</p>
 
         <div class="gallery-shell">
           <button class="gallery-arrow prev" type="button" aria-label="前の写真を見る">‹</button>
           <div class="clinic-gallery" tabindex="0" aria-label="院内・設備の写真">
             <figure class="gallery-card">
-              <img
-                src="assets/interior.webp"
-                alt="清潔感のある施術室（サンプル写真）"
-                width="768"
-                height="512"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>施術室</strong>
-                <span>明るく落ち着いた空間</span>
-              </figcaption>
+              <img src="assets/facility-reception.webp" alt="受付（サンプル写真）" width="768" height="512" loading="lazy" />
+              <figcaption><strong>受付</strong><span>ご来院時はこちらでお声がけください</span></figcaption>
             </figure>
             <figure class="gallery-card">
-              <img
-                src="assets/oxygen.webp"
-                alt="酸素カプセル（サンプル写真）"
-                width="768"
-                height="512"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>酸素カプセル</strong>
-                <span>院内設備のひとつです</span>
-              </figcaption>
+              <img src="assets/facility-waiting.webp" alt="待合室（サンプル写真）" width="768" height="512" loading="lazy" />
+              <figcaption><strong>待合室</strong><span>施術までゆっくりお待ちいただけます</span></figcaption>
             </figure>
             <figure class="gallery-card">
-              <img
-                src="assets/hero.webp"
-                alt="身体の状態を確認している様子（サンプル写真）"
-                width="768"
-                height="512"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>状態の確認</strong>
-                <span>丁寧にお話を伺います</span>
-              </figcaption>
+              <img src="assets/facility-treatment.webp" alt="施術室（サンプル写真）" width="768" height="512" loading="lazy" />
+              <figcaption><strong>施術室</strong><span>明るく落ち着いた施術スペースです</span></figcaption>
             </figure>
             <figure class="gallery-card">
-              <img
-                src="assets/doctor.webp"
-                alt="院長のプロフィール（サンプル写真）"
-                width="768"
-                height="512"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>院長・スタッフ</strong>
-                <span>お気軽にご相談ください</span>
-              </figcaption>
+              <img src="assets/facility-oxygen.webp" alt="酸素カプセル（サンプル写真）" width="768" height="512" loading="lazy" />
+              <figcaption><strong>酸素カプセル</strong><span>ご利用方法や料金はお気軽にお尋ねください</span></figcaption>
             </figure>
           </div>
           <button class="gallery-arrow next" type="button" aria-label="次の写真を見る">›</button>
@@ -373,46 +362,20 @@
 
       <section class="access-section" id="access">
         <div class="access-content">
-          <div class="section-heading align-left light">
-            <p>ACCESS</p>
-            <h2>アクセス・営業時間</h2>
-            <span></span>
-          </div>
+          <div class="section-heading align-left light"><p>ACCESS</p><h2>アクセス・受付時間</h2><span></span></div>
           <div class="access-summary">
             <span class="access-pin">駅</span>
-            <div>
-              <small>近鉄奈良線</small>
-              <strong>富雄駅前</strong>
-              <p>駅から通いやすい立地です</p>
-            </div>
+            <div><small>近鉄奈良線</small><strong>富雄駅前</strong><p>駅から通いやすい立地です</p></div>
           </div>
           <dl class="clinic-data">
-            <div>
-              <dt>院名</dt>
-              <dd>近藤接骨院</dd>
-            </div>
-            <div>
-              <dt>住所</dt>
-              <dd>奈良県奈良市 富雄駅前<br /><small>※正式住所へ差し替え</small></dd>
-            </div>
-            <div>
-              <dt>電話</dt>
-              <dd class="js-phone-text">000-0000-0000</dd>
-            </div>
-            <div>
-              <dt>定休日</dt>
-              <dd>木曜日</dd>
-            </div>
+            <div><dt>院名</dt><dd>近藤接骨院</dd></div>
+            <div><dt>住所</dt><dd>奈良県奈良市富雄元町2-3-31 2階</dd></div>
+            <div><dt>電話</dt><dd><a class="js-phone-link js-phone-text" href="tel:0742956886">0742-95-6886</a></dd></div>
+            <div><dt>定休日</dt><dd>木曜日</dd></div>
           </dl>
           <div class="access-buttons" id="contact">
-            <a class="button button-line js-line-link" href="#contact">
-              <span class="button-label">LINE</span>
-              LINEで予約・相談
-            </a>
-            <a class="button button-phone light-phone js-phone-link" href="#contact">
-              <span class="button-label">TEL</span>
-              電話で問い合わせ
-            </a>
+            <a class="button button-line js-line-link" href="#contact"><span class="button-label">LINE</span>LINEで予約・相談</a>
+            <a class="button button-phone light-phone js-phone-link" href="tel:0742956886"><span class="button-label">TEL</span>電話で問い合わせ</a>
           </div>
         </div>
 
@@ -421,40 +384,31 @@
             <h3>受付時間</h3>
             <div class="hours-table" role="table" aria-label="受付時間">
               <div class="hours-row head" role="row">
-                <span role="columnheader">受付時間</span>
-                <span role="columnheader">月</span>
-                <span role="columnheader">火</span>
-                <span role="columnheader">水</span>
-                <span role="columnheader">木</span>
-                <span role="columnheader">金</span>
-                <span role="columnheader">土</span>
-                <span role="columnheader">日</span>
+                <span role="columnheader">受付時間</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span>
               </div>
               <div class="hours-row" role="row">
-                <strong role="cell">9時–13時</strong>
-                <span>●</span><span>●</span><span>●</span><span>―</span><span>●</span><span>●</span><span>●</span>
+                <strong role="cell"><b>9時</b><i>–</i><b>13時</b></strong><span>●</span><span>●</span><span>●</span><span>―</span><span>●</span><span>●</span><span>●</span>
               </div>
               <div class="hours-row" role="row">
-                <strong role="cell">15時–21時</strong>
-                <span>●</span><span>●</span><span>●</span><span>―</span><span>●</span><span>●</span><span>●</span>
+                <strong role="cell"><b>15時</b><i>–</i><b>21時</b></strong><span>●</span><span>●</span><span>●</span><span>―</span><span>●</span><span>●</span><span>●</span>
               </div>
             </div>
-            <p>※受付時間は公開前に必ず最新情報をご確認ください。</p>
+            <div class="reservation-note">
+              <strong>予約優先となります</strong>
+              <p>
+                ご予約いただいた場合でも、前の方の施術状況により、ご案内時間が多少前後することがあります。ご来院前にお電話いただければ、当日の状況を確認し、より正確なご案内時間をお伝えできます。
+              </p>
+              <a class="js-phone-link" href="tel:0742956886">☎ 0742-95-6886</a>
+            </div>
           </div>
           <div class="map-wrap">
             <iframe
-              title="富雄駅周辺の地図"
-              src="https://www.google.com/maps?q=%E5%AF%8C%E9%9B%84%E9%A7%85&output=embed"
+              title="近藤接骨院周辺の地図"
+              src="https://www.google.com/maps?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E5%AF%8C%E9%9B%84%E5%85%83%E7%94%BA2-3-31&amp;output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E9%9B%84%E9%A7%85"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Googleマップで見る
-            </a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E5%AF%8C%E9%9B%84%E5%85%83%E7%94%BA2-3-31" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
           </div>
         </div>
       </section>
@@ -463,46 +417,31 @@
         <p>身体のお悩み、まずはお気軽にご相談ください</p>
         <h2>学校や仕事帰りにも通いやすい<br />富雄駅前の近藤接骨院</h2>
         <div class="final-actions">
-          <a class="button button-line js-line-link" href="#contact">
-            <span class="button-label">LINE</span>
-            LINEで予約・相談する
-          </a>
-          <a class="button button-phone js-phone-link" href="#contact">
-            <span class="button-label">TEL</span>
-            <span class="js-phone-text">000-0000-0000</span>
-          </a>
+          <a class="button button-line js-line-link" href="#contact"><span class="button-label">LINE</span>LINEで予約・相談する</a>
+          <a class="button button-phone js-phone-link" href="tel:0742956886"><span class="button-label">TEL</span><span class="js-phone-text">0742-95-6886</span></a>
         </div>
       </section>
     </main>
 
     <footer>
       <a class="brand footer-brand" href="#top">
-        <span class="brand-mark">K</span>
-        <span>
-          <strong>近藤接骨院</strong>
-          <small>KONDO SEIKOTSUIN</small>
-        </span>
+        <img class="brand-logo" src="assets/kondo-logo-clean-v1.png" alt="" width="52" height="52" />
+        <span><strong>近藤接骨院</strong><small>KONDO SEIKOTSUIN</small></span>
       </a>
       <p>奈良市・富雄駅前／土日も夜21時まで受付</p>
       <small>© Kondo Seikotsuin. All Rights Reserved.</small>
     </footer>
 
     <div class="mobile-fixed-cta" aria-label="予約・お問い合わせ">
-      <a class="js-phone-link" href="#contact">
-        <span>TEL</span>
-        電話する
-      </a>
-      <a class="js-line-link" href="#contact">
-        <span>LINE</span>
-        予約・相談
-      </a>
+      <a class="js-phone-link" href="tel:0742956886"><span>TEL</span>電話する</a>
+      <a class="js-line-link" href="#contact"><span>LINE</span>予約・相談</a>
     </div>
 
     <div class="placeholder-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" hidden>
       <div>
         <button class="dialog-close" type="button" aria-label="閉じる">×</button>
-        <p id="dialog-title">公開前の設定が必要です</p>
-        <span>このボタンには、正式な電話番号またはLINE URLを設定してください。</span>
+        <p id="dialog-title">LINEの設定が必要です</p>
+        <span>公開前に、正式なLINE URLを設定してください。</span>
       </div>
     </div>
 

@@ -1,10 +1,5 @@
-/*
- * 公開前に、次の2項目を正式な内容へ差し替えてください。
- * 例:
- * const PHONE_NUMBER = "0742-00-0000";
- * const LINE_URL = "https://line.me/R/ti/p/@xxxxxxxx";
- */
-const PHONE_NUMBER = "";
+/* 公開前に、LINE_URLへ近藤接骨院の正式なLINE URLを設定してください。 */
+const PHONE_NUMBER = "0742-95-6886";
 const LINE_URL = "";
 
 const digitsOnly = (value) => value.replace(/[^\d+]/g, "");
@@ -154,3 +149,92 @@ gallery.addEventListener("keydown", (event) => {
 
 window.addEventListener("resize", updateDots, { passive: true });
 updateDots();
+
+const flowGallery = document.querySelector(".flow-gallery");
+const flowCards = [...flowGallery.querySelectorAll(".flow-card")];
+const flowPreviousButton = document.querySelector(".flow-arrow.prev");
+const flowNextButton = document.querySelector(".flow-arrow.next");
+
+function flowCardStep() {
+  if (!flowCards.length) return 0;
+  const flowGap = Number.parseFloat(getComputedStyle(flowGallery).gap) || 0;
+  return flowCards[0].getBoundingClientRect().width + flowGap;
+}
+
+function updateFlowArrows() {
+  const maximumScroll = flowGallery.scrollWidth - flowGallery.clientWidth;
+  flowPreviousButton.disabled = flowGallery.scrollLeft <= 4;
+  flowNextButton.disabled = flowGallery.scrollLeft >= maximumScroll - 4;
+}
+
+function moveFlow(direction) {
+  flowGallery.scrollBy({ left: flowCardStep() * direction, behavior: "smooth" });
+}
+
+flowPreviousButton.addEventListener("click", () => moveFlow(-1));
+flowNextButton.addEventListener("click", () => moveFlow(1));
+flowGallery.addEventListener("scroll", updateFlowArrows, { passive: true });
+flowGallery.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    moveFlow(-1);
+  }
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    moveFlow(1);
+  }
+});
+
+window.addEventListener("resize", updateFlowArrows, { passive: true });
+updateFlowArrows();
+
+const revealGroups = [
+  ".section-heading",
+  ".section-lead",
+  ".concern-card",
+  ".about-message",
+  ".reason-card",
+  ".menu-card",
+  ".director-photo",
+  ".director-copy",
+  ".flow-card",
+  ".gallery-card",
+  ".access-content",
+  ".access-details",
+  ".hours-card",
+  ".final-cta > p",
+  ".final-cta > h2",
+  ".final-actions",
+];
+
+const revealTargets = [];
+
+revealGroups.forEach((selector) => {
+  document.querySelectorAll(selector).forEach((element, index) => {
+    element.classList.add("scroll-reveal");
+    element.style.setProperty("--reveal-delay", `${Math.min(index, 4) * 55}ms`);
+    revealTargets.push(element);
+  });
+});
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (reducedMotion || !("IntersectionObserver" in window)) {
+  revealTargets.forEach((element) => element.classList.add("is-visible"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -7% 0px",
+    },
+  );
+
+  revealTargets.forEach((element) => revealObserver.observe(element));
+}
